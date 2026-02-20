@@ -1,0 +1,64 @@
+name: Build .deb
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set version
+        run: echo "VERSION=$(python3 -c 'exec(open("src/gnome_l10n/__init__.py").read()); print(__version__)')" >> $GITHUB_ENV
+      - name: Build .deb
+        run: |
+          PKG=gnome-l10n
+          mkdir -p pkg/DEBIAN
+          mkdir -p pkg/usr/lib/python3/dist-packages/gnome_l10n
+          mkdir -p pkg/usr/bin
+          mkdir -p pkg/usr/share/applications
+          
+          cp src/gnome_l10n/*.py pkg/usr/lib/python3/dist-packages/gnome_l10n/
+          
+          cat > pkg/usr/bin/gnome-l10n <<'BIN'
+          #!/usr/bin/env python3
+          from gnome_l10n.main import main
+          main()
+          BIN
+          chmod +x pkg/usr/bin/gnome-l10n
+          sed -i 's/^          //' pkg/usr/bin/gnome-l10n
+          
+          cat > pkg/usr/share/applications/se.danielnylander.gnome-l10n.desktop <<'DESK'
+          [Desktop Entry]
+          Name=GNOME L10n
+          Comment=Translation statistics viewer for GNOME
+          Exec=gnome-l10n
+          Icon=applications-utils
+          Terminal=false
+          Type=Application
+          Categories=Utility;
+          DESK
+          sed -i 's/^          //' pkg/usr/share/applications/se.danielnylander.gnome-l10n.desktop
+          
+          cat > pkg/DEBIAN/control <<CTRL
+          Package: gnome-l10n
+          Version: ${VERSION}-1
+          Architecture: all
+          Maintainer: Daniel Nylander <daniel@danielnylander.se>
+          Depends: python3, python3-gi, gir1.2-gtk-4.0, gir1.2-adw-1
+          Recommends: scummvm
+          Section: utils
+          Priority: optional
+          Homepage: https://github.com/yeager/gnome-l10n
+          Description: GTK4/Adwaita frontend for ScummVM
+           Browse, search and launch ScummVM utils with a modern
+           Linux desktop interface.
+          CTRL
+          sed -i 's/^          //' pkg/DEBIAN/control
+          
+          dpkg-deb --build pkg ${PKG}_${VERSION}-1_all.deb
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deb-package
+          path: '*.deb'

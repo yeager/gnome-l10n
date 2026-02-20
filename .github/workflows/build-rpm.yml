@@ -1,0 +1,63 @@
+name: Build .rpm
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: fedora:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install deps
+        run: dnf install -y rpm-build python3 python3-devel sed coreutils
+      - name: Build RPM
+        run: |
+          VER=$(python3 -c 'exec(open("src/gnome_l10n/__init__.py").read()); print(__version__)')
+          PKG=gnome-l10n
+          
+          mkdir -p ~/rpmbuild/{SOURCES,SPECS,BUILD,RPMS,SRPMS}
+          tar czf ~/rpmbuild/SOURCES/${PKG}-${VER}.tar.gz --transform="s,^,${PKG}-${VER}/," src/ 
+          
+          SPEC=$(cat <<'SPEC_END'
+          Name:           gnome-l10n
+          Version:        VERSIONPLACEHOLDER
+          Release:        1
+          Summary:        Translation statistics viewer for GNOME
+          License:        GPL-3.0-or-later
+          URL:            https://github.com/yeager/gnome-l10n
+          Source0:        gnome-l10n-VERSIONPLACEHOLDER.tar.gz
+          BuildArch:      noarch
+          Requires:       python3, python3-gobject, gtk4, libadwaita
+          Recommends:     
+          
+          %description
+          Browse, search and launch ScummVM games with a modern
+          Linux desktop interface.
+          
+          %prep
+          %setup -q
+          
+          %install
+          mkdir -p %{buildroot}/usr/lib/python3/dist-packages/gnome_l10n
+          cp src/gnome_l10n/*.py %{buildroot}/usr/lib/python3/dist-packages/gnome_l10n/
+          mkdir -p %{buildroot}/usr/bin
+          echo '#!/usr/bin/env python3' > %{buildroot}/usr/bin/gnome-l10n
+          echo 'from gnome_l10n.main import main' >> %{buildroot}/usr/bin/gnome-l10n
+          echo 'main()' >> %{buildroot}/usr/bin/gnome-l10n
+          chmod +x %{buildroot}/usr/bin/gnome-l10n
+          
+          %files
+          /usr/lib/python3/dist-packages/gnome_l10n/
+          /usr/bin/gnome-l10n
+          SPEC_END
+          )
+          
+          echo "$SPEC" | sed "s/VERSIONPLACEHOLDER/$VER/g; s/^          //" > ~/rpmbuild/SPECS/${PKG}.spec
+          rpmbuild -bb ~/rpmbuild/SPECS/${PKG}.spec
+          cp ~/rpmbuild/RPMS/noarch/*.rpm .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rpm-package
+          path: '*.rpm'
