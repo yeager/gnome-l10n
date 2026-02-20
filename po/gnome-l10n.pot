@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 07:51+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/gnome_l10n/main.py:123 src/gnome_l10n/main.py:137
+#: src/gnome_l10n/main.py:496
+msgid "GNOME L10n"
+msgstr ""
+
+#: src/gnome_l10n/main.py:138
+msgid "Translation Statistics"
+msgstr ""
+
+#: src/gnome_l10n/main.py:145
+msgid "Refresh (F5)"
+msgstr ""
+
+#: src/gnome_l10n/main.py:151
+msgid "Search (Ctrl+F)"
+msgstr ""
+
+#: src/gnome_l10n/main.py:158
+msgid "Toggle Theme"
+msgstr ""
+
+#: src/gnome_l10n/main.py:165
+msgid "Export CSV"
+msgstr ""
+
+#: src/gnome_l10n/main.py:166
+msgid "About GNOME L10n"
+msgstr ""
+
+#: src/gnome_l10n/main.py:176
+msgid "Filter modules..."
+msgstr ""
+
+#: src/gnome_l10n/main.py:190
+msgid "Release:"
+msgstr ""
+
+#: src/gnome_l10n/main.py:197
+msgid "Language:"
+msgstr ""
+
+#: src/gnome_l10n/main.py:205
+msgid "All"
+msgstr ""
+
+#: src/gnome_l10n/main.py:210
+msgid "Incomplete"
+msgstr ""
+
+#: src/gnome_l10n/main.py:214
+msgid "Complete"
+msgstr ""
+
+#: src/gnome_l10n/main.py:272
+msgid "Loading..."
+msgstr ""
+
+#: src/gnome_l10n/main.py:321
+msgid "Loading module statistics..."
+msgstr ""
+
+#: src/gnome_l10n/main.py:332
+#, python-format
+msgid "Loading %d / %d modules..."
+msgstr ""
+
+#: src/gnome_l10n/main.py:383
+#, python-format
+msgid "%d modules — %d complete"
+msgstr ""
+
+#: src/gnome_l10n/main.py:391
+#, python-format
+msgid "%d modules shown, %d total"
+msgstr ""
+
+#: src/gnome_l10n/main.py:452
+#, python-format
+msgid "Exported to %s"
+msgstr ""
+
+#: src/gnome_l10n/main.py:505
+msgid ""
+"Translation statistics viewer for GNOME.\n"
+"Data from l10n.gnome.org."
+msgstr ""
+
+#: src/gnome_l10n/main.py:506
+msgid "translator-credits"
+msgstr ""
