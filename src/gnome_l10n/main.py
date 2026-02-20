@@ -370,7 +370,7 @@ class MainWindow(Adw.ApplicationWindow):
         self.language_dropdown = Gtk.DropDown.new_from_strings(lang_names)
         self.language_dropdown.set_size_request(220, -1)
         # Select default language
-        for i, (code, _) in enumerate(LANGUAGES):
+        for i, (code, _name) in enumerate(LANGUAGES):
             if code == self._language:
                 self.language_dropdown.set_selected(i)
                 break
