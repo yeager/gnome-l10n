@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 07:51+0100\n"
+"PO-Revision-Date: 2026-02-20 06:53+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
+"Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/305087/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/gnome_l10n/main.py:123 src/gnome_l10n/main.py:137
+#: src/gnome_l10n/main.py:496
+msgid "GNOME L10n"
+msgstr "GNOME L10n"
+
+#: src/gnome_l10n/main.py:138
+msgid "Translation Statistics"
+msgstr "Översättningsstatistik"
+
+#: src/gnome_l10n/main.py:145
+msgid "Refresh (F5)"
+msgstr "Uppdatera (F5)"
+
+#: src/gnome_l10n/main.py:151
+msgid "Search (Ctrl+F)"
+msgstr "Sök (Ctrl+F)"
+
+#: src/gnome_l10n/main.py:158
+msgid "Toggle Theme"
+msgstr "Växla tema"
+
+#: src/gnome_l10n/main.py:165
+msgid "Export CSV"
+msgstr "Exportera CSV"
+
+#: src/gnome_l10n/main.py:166
+msgid "About GNOME L10n"
+msgstr "Om GNOME L10n"
+
+#: src/gnome_l10n/main.py:176
+msgid "Filter modules..."
+msgstr "Filtrera moduler..."
+
+#: src/gnome_l10n/main.py:190
+msgid "Release:"
+msgstr "Utgåva:"
+
+#: src/gnome_l10n/main.py:197
+msgid "Language:"
+msgstr "Språk:"
+
+#: src/gnome_l10n/main.py:205
+msgid "All"
+msgstr "Alla"
+
+#: src/gnome_l10n/main.py:210
+msgid "Incomplete"
+msgstr "Ofärdiga"
+
+#: src/gnome_l10n/main.py:214
+msgid "Complete"
+msgstr "Färdiga"
+
+#: src/gnome_l10n/main.py:272
+msgid "Loading..."
+msgstr "Läser in..."
+
+#: src/gnome_l10n/main.py:321
+msgid "Loading module statistics..."
+msgstr "Läser in modulstatistik..."
+
+#: src/gnome_l10n/main.py:332
+#, python-format
+msgid "Loading %d / %d modules..."
+msgstr "Läser in %d / %d moduler..."
+
+#: src/gnome_l10n/main.py:383
+#, python-format
+msgid "%d modules — %d complete"
+msgstr "%d moduler — %d färdiga"
+
+#: src/gnome_l10n/main.py:391
+#, python-format
+msgid "%d modules shown, %d total"
+msgstr "%d moduler visas, %d totalt"
+
+#: src/gnome_l10n/main.py:452
+#, python-format
+msgid "Exported to %s"
+msgstr "Exporterades till %s"
+
+#: src/gnome_l10n/main.py:505
+msgid ""
+"Translation statistics viewer for GNOME.\n"
+"Data from l10n.gnome.org."
+msgstr ""
+"Visa översättningsstatistik för GNOME.\n"
+"Data från l10n.gnome.org."
+
+#: src/gnome_l10n/main.py:506
+msgid "translator-credits"
+msgstr "Daniel Nylander <po@danielnylander.se>, 2026."
