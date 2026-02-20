@@ -11,13 +11,47 @@ from typing import List, Optional, Callable
 
 API_BASE = "https://l10n.gnome.org/api/v1"
 
+
 def get_cache_dir():
     p = Path(os.environ.get("XDG_CACHE_HOME", Path.home() / ".cache")) / "gnome-l10n"
     p.mkdir(parents=True, exist_ok=True)
     return p
 
+
+def get_config_dir():
+    p = Path(os.environ.get("XDG_CONFIG_HOME", Path.home() / ".config")) / "gnome-l10n"
+    p.mkdir(parents=True, exist_ok=True)
+    return p
+
+
 CACHE_FILE = get_cache_dir() / "stats_cache.json"
-CACHE_MAX_AGE = 3600  # 1 hour
+CONFIG_FILE = get_config_dir() / "settings.json"
+
+# Default settings
+DEFAULT_SETTINGS = {
+    "cache_ttl": 3600,
+    "default_language": "sv",
+    "default_release": "gnome-49",
+}
+
+
+def load_settings():
+    """Load user settings from config file."""
+    settings = dict(DEFAULT_SETTINGS)
+    if CONFIG_FILE.exists():
+        try:
+            with open(CONFIG_FILE) as f:
+                stored = json.load(f)
+            settings.update(stored)
+        except Exception:
+            pass
+    return settings
+
+
+def save_settings(settings):
+    """Save user settings to config file."""
+    with open(CONFIG_FILE, "w") as f:
+        json.dump(settings, f, indent=2)
 
 
 @dataclass
@@ -46,10 +80,26 @@ class ModuleStats:
     def complete(self):
         return self.fuzzy == 0 and self.untranslated == 0 and self.total > 0
 
+    @property
+    def vertimus_url(self):
+        return f"https://l10n.gnome.org/vertimus/{self.module}/{self.branch}/{self.domain}/{self.language}/"
+
+    @property
+    def po_url(self):
+        if self.po_file:
+            return f"https://l10n.gnome.org{self.po_file}"
+        return ""
+
+    @property
+    def pot_url(self):
+        if self.pot_file:
+            return f"https://l10n.gnome.org{self.pot_file}"
+        return ""
+
 
 def _fetch_json(url):
     """Fetch JSON from URL."""
-    req = urllib.request.Request(url, headers={"User-Agent": "gnome-l10n/0.1.0"})
+    req = urllib.request.Request(url, headers={"User-Agent": "gnome-l10n/0.2.0"})
     with urllib.request.urlopen(req, timeout=15) as resp:
         return json.loads(resp.read())
 
@@ -136,8 +186,10 @@ def save_cache(release, language, stats):
         json.dump(data, f, indent=2)
 
 
-def load_cache(release, language):
+def load_cache(release, language, max_age=None):
     """Load stats from cache if fresh enough."""
+    if max_age is None:
+        max_age = load_settings().get("cache_ttl", 3600)
     if not CACHE_FILE.exists():
         return None
     try:
@@ -145,7 +197,7 @@ def load_cache(release, language):
             data = json.load(f)
         if data.get("release") != release or data.get("language") != language:
             return None
-        if time.time() - data.get("timestamp", 0) > CACHE_MAX_AGE:
+        if time.time() - data.get("timestamp", 0) > max_age:
             return None
         return [ModuleStats(**s) for s in data.get("stats", [])]
     except Exception:
