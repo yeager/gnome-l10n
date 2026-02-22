@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the gnome-l10n package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: gnome-l10n\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-22 06:25+0100\n"
+"POT-Creation-Date: 2026-02-22 17:04+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,218 +17,218 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/gnome_l10n/main.py:64
+#: src/gnome_l10n/main.py:65
 msgid "Completion % (low → high)"
 msgstr ""
 
-#: src/gnome_l10n/main.py:65
+#: src/gnome_l10n/main.py:66
 msgid "Completion % (high → low)"
 msgstr ""
 
-#: src/gnome_l10n/main.py:66
+#: src/gnome_l10n/main.py:67
 msgid "Module name (A → Z)"
 msgstr ""
 
-#: src/gnome_l10n/main.py:67
+#: src/gnome_l10n/main.py:68
 msgid "Module name (Z → A)"
 msgstr ""
 
-#: src/gnome_l10n/main.py:68
+#: src/gnome_l10n/main.py:69
 msgid "Untranslated (most first)"
 msgstr ""
 
-#: src/gnome_l10n/main.py:69
+#: src/gnome_l10n/main.py:70
 msgid "Fuzzy (most first)"
 msgstr ""
 
-#: src/gnome_l10n/main.py:70
+#: src/gnome_l10n/main.py:71
 msgid "Total strings (most first)"
 msgstr ""
 
-#: src/gnome_l10n/main.py:71
+#: src/gnome_l10n/main.py:72
 msgid "State"
 msgstr ""
 
-#: src/gnome_l10n/main.py:75
+#: src/gnome_l10n/main.py:76
 msgid "30 minutes"
 msgstr ""
 
-#: src/gnome_l10n/main.py:76
+#: src/gnome_l10n/main.py:77
 msgid "1 hour"
 msgstr ""
 
-#: src/gnome_l10n/main.py:77
+#: src/gnome_l10n/main.py:78
 msgid "2 hours"
 msgstr ""
 
-#: src/gnome_l10n/main.py:78
+#: src/gnome_l10n/main.py:79
 msgid "4 hours"
 msgstr ""
 
-#: src/gnome_l10n/main.py:150
+#: src/gnome_l10n/main.py:151
 msgid "Open on l10n.gnome.org"
 msgstr ""
 
-#: src/gnome_l10n/main.py:223
+#: src/gnome_l10n/main.py:224
 msgid "Download PO file"
 msgstr ""
 
-#: src/gnome_l10n/main.py:230
+#: src/gnome_l10n/main.py:231
 msgid "Open vertimus page"
 msgstr ""
 
-#: src/gnome_l10n/main.py:242 src/gnome_l10n/main.py:356
+#: src/gnome_l10n/main.py:243 src/gnome_l10n/main.py:357
 msgid "Preferences"
 msgstr ""
 
-#: src/gnome_l10n/main.py:249 src/gnome_l10n/main.py:779
+#: src/gnome_l10n/main.py:250 src/gnome_l10n/main.py:780
 msgid "General"
 msgstr ""
 
-#: src/gnome_l10n/main.py:252
+#: src/gnome_l10n/main.py:253
 msgid "Default Language"
 msgstr ""
 
-#: src/gnome_l10n/main.py:265
+#: src/gnome_l10n/main.py:266
 msgid "Default Release"
 msgstr ""
 
-#: src/gnome_l10n/main.py:273
+#: src/gnome_l10n/main.py:274
 msgid "Cache"
 msgstr ""
 
-#: src/gnome_l10n/main.py:275
+#: src/gnome_l10n/main.py:276
 msgid "Cache Duration"
 msgstr ""
 
-#: src/gnome_l10n/main.py:311 src/gnome_l10n/main.py:327
-#: src/gnome_l10n/main.py:794
+#: src/gnome_l10n/main.py:312 src/gnome_l10n/main.py:328
+#: src/gnome_l10n/main.py:795
 msgid "GNOME L10n"
 msgstr ""
 
-#: src/gnome_l10n/main.py:328
+#: src/gnome_l10n/main.py:329
 msgid "Translation Statistics"
 msgstr ""
 
-#: src/gnome_l10n/main.py:335
+#: src/gnome_l10n/main.py:336
 msgid "Refresh (F5)"
 msgstr ""
 
-#: src/gnome_l10n/main.py:341
+#: src/gnome_l10n/main.py:342
 msgid "Search (Ctrl+F)"
 msgstr ""
 
-#: src/gnome_l10n/main.py:348
+#: src/gnome_l10n/main.py:349
 msgid "Toggle Theme"
 msgstr ""
 
-#: src/gnome_l10n/main.py:355
+#: src/gnome_l10n/main.py:356
 msgid "Export CSV"
 msgstr ""
 
-#: src/gnome_l10n/main.py:357 src/gnome_l10n/main.py:784
+#: src/gnome_l10n/main.py:358 src/gnome_l10n/main.py:785
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: src/gnome_l10n/main.py:358
+#: src/gnome_l10n/main.py:359
 msgid "About GNOME L10n"
 msgstr ""
 
-#: src/gnome_l10n/main.py:368
+#: src/gnome_l10n/main.py:369
 msgid "Filter modules..."
 msgstr ""
 
-#: src/gnome_l10n/main.py:382
+#: src/gnome_l10n/main.py:383
 msgid "Release:"
 msgstr ""
 
-#: src/gnome_l10n/main.py:389
+#: src/gnome_l10n/main.py:390
 msgid "Language:"
 msgstr ""
 
-#: src/gnome_l10n/main.py:402
+#: src/gnome_l10n/main.py:403
 msgid "Sort:"
 msgstr ""
 
-#: src/gnome_l10n/main.py:417
+#: src/gnome_l10n/main.py:418
 msgid "All"
 msgstr ""
 
-#: src/gnome_l10n/main.py:422
+#: src/gnome_l10n/main.py:423
 msgid "Incomplete"
 msgstr ""
 
-#: src/gnome_l10n/main.py:426
+#: src/gnome_l10n/main.py:427
 msgid "Complete"
 msgstr ""
 
-#: src/gnome_l10n/main.py:430
+#: src/gnome_l10n/main.py:431
 msgid "Has Fuzzy"
 msgstr ""
 
-#: src/gnome_l10n/main.py:434
+#: src/gnome_l10n/main.py:435
 msgid "Translated State"
 msgstr ""
 
-#: src/gnome_l10n/main.py:492
+#: src/gnome_l10n/main.py:493
 msgid "Loading..."
 msgstr ""
 
-#: src/gnome_l10n/main.py:562
+#: src/gnome_l10n/main.py:563
 msgid "Loading module statistics..."
 msgstr ""
 
-#: src/gnome_l10n/main.py:573
+#: src/gnome_l10n/main.py:574
 #, python-format
 msgid "Loading %d / %d modules..."
 msgstr ""
 
-#: src/gnome_l10n/main.py:631
+#: src/gnome_l10n/main.py:632
 #, python-format
 msgid "%d modules — %d complete — %d fuzzy — %d untranslated"
 msgstr ""
 
-#: src/gnome_l10n/main.py:640
+#: src/gnome_l10n/main.py:641
 #, python-format
 msgid "%d modules shown, %d total"
 msgstr ""
 
-#: src/gnome_l10n/main.py:714
+#: src/gnome_l10n/main.py:715
 #, python-format
 msgid "Exported to %s"
 msgstr ""
 
-#: src/gnome_l10n/main.py:781
+#: src/gnome_l10n/main.py:782
 msgid "Quit"
 msgstr ""
 
-#: src/gnome_l10n/main.py:782
+#: src/gnome_l10n/main.py:783
 msgid "Refresh"
 msgstr ""
 
-#: src/gnome_l10n/main.py:783
+#: src/gnome_l10n/main.py:784
 msgid "Search"
 msgstr ""
 
-#: src/gnome_l10n/main.py:803
+#: src/gnome_l10n/main.py:804
 msgid ""
 "Translation statistics viewer for GNOME.\n"
 "Data from l10n.gnome.org."
 msgstr ""
 
-#: src/gnome_l10n/main.py:804
+#: src/gnome_l10n/main.py:805
 msgid "translator-credits"
 msgstr ""
 
-#: src/gnome_l10n/main.py:821
+#: src/gnome_l10n/main.py:822
 msgid "Welcome"
 msgstr ""
 
-#: src/gnome_l10n/main.py:827
+#: src/gnome_l10n/main.py:828
 msgid "Welcome to GNOME Translation Stats"
 msgstr ""
 
-#: src/gnome_l10n/main.py:829
+#: src/gnome_l10n/main.py:830
 msgid ""
 "Track GNOME translation progress.\n"
 "\n"
@@ -238,6 +238,6 @@ msgid ""
 "✓ Links to Vertimus for translating"
 msgstr ""
 
-#: src/gnome_l10n/main.py:832
+#: src/gnome_l10n/main.py:833
 msgid "Get Started"
 msgstr ""
