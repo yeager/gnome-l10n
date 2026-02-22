@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 07:51+0100\n"
+"POT-Creation-Date: 2026-02-22 06:25+0100\n"
 "PO-Revision-Date: 2026-02-20 06:53+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/305087/sv/)\n"
@@ -21,88 +21,200 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/gnome_l10n/main.py:123 src/gnome_l10n/main.py:137
-#: src/gnome_l10n/main.py:496
+#: src/gnome_l10n/main.py:64
+msgid "Completion % (low → high)"
+msgstr "Färdigställning % (lågt → högt)"
+
+#: src/gnome_l10n/main.py:65
+msgid "Completion % (high → low)"
+msgstr "Färdigställning % (högt → lågt)"
+
+#: src/gnome_l10n/main.py:66
+msgid "Module name (A → Z)"
+msgstr "Modulnamn (A → Ö)"
+
+#: src/gnome_l10n/main.py:67
+msgid "Module name (Z → A)"
+msgstr "Modulnamn (Ö → A)"
+
+#: src/gnome_l10n/main.py:68
+msgid "Untranslated (most first)"
+msgstr "Oöversatta (mest först)"
+
+#: src/gnome_l10n/main.py:69
+msgid "Fuzzy (most first)"
+msgstr "Luddiga (mest först)"
+
+#: src/gnome_l10n/main.py:70
+msgid "Total strings (most first)"
+msgstr "Totalt antal strängar (mest först)"
+
+#: src/gnome_l10n/main.py:71
+msgid "State"
+msgstr "Tillstånd"
+
+#: src/gnome_l10n/main.py:75
+msgid "30 minutes"
+msgstr "30 minuter"
+
+#: src/gnome_l10n/main.py:76
+msgid "1 hour"
+msgstr "1 timme"
+
+#: src/gnome_l10n/main.py:77
+msgid "2 hours"
+msgstr "2 timmar"
+
+#: src/gnome_l10n/main.py:78
+msgid "4 hours"
+msgstr "4 timmar"
+
+#: src/gnome_l10n/main.py:150
+msgid "Open on l10n.gnome.org"
+msgstr "Öppna på l10n.gnome.org"
+
+#: src/gnome_l10n/main.py:223
+msgid "Download PO file"
+msgstr "Hämta PO-fil"
+
+#: src/gnome_l10n/main.py:230
+msgid "Open vertimus page"
+msgstr "Öppna vertimus-sida"
+
+#: src/gnome_l10n/main.py:242 src/gnome_l10n/main.py:356
+msgid "Preferences"
+msgstr "Inställningar"
+
+#: src/gnome_l10n/main.py:249 src/gnome_l10n/main.py:779
+msgid "General"
+msgstr "Allmänt"
+
+#: src/gnome_l10n/main.py:252
+msgid "Default Language"
+msgstr "Standardspråk"
+
+#: src/gnome_l10n/main.py:265
+msgid "Default Release"
+msgstr "Standardutgåva"
+
+#: src/gnome_l10n/main.py:273
+msgid "Cache"
+msgstr "Cache"
+
+#: src/gnome_l10n/main.py:275
+msgid "Cache Duration"
+msgstr "Cachetid"
+
+#: src/gnome_l10n/main.py:311 src/gnome_l10n/main.py:327
+#: src/gnome_l10n/main.py:794
 msgid "GNOME L10n"
 msgstr "GNOME L10n"
 
-#: src/gnome_l10n/main.py:138
+#: src/gnome_l10n/main.py:328
 msgid "Translation Statistics"
 msgstr "Översättningsstatistik"
 
-#: src/gnome_l10n/main.py:145
+#: src/gnome_l10n/main.py:335
 msgid "Refresh (F5)"
 msgstr "Uppdatera (F5)"
 
-#: src/gnome_l10n/main.py:151
+#: src/gnome_l10n/main.py:341
 msgid "Search (Ctrl+F)"
 msgstr "Sök (Ctrl+F)"
 
-#: src/gnome_l10n/main.py:158
+#: src/gnome_l10n/main.py:348
 msgid "Toggle Theme"
 msgstr "Växla tema"
 
-#: src/gnome_l10n/main.py:165
+#: src/gnome_l10n/main.py:355
 msgid "Export CSV"
 msgstr "Exportera CSV"
 
-#: src/gnome_l10n/main.py:166
+#: src/gnome_l10n/main.py:357 src/gnome_l10n/main.py:784
+msgid "Keyboard Shortcuts"
+msgstr "Tangentbordsgenvägar"
+
+#: src/gnome_l10n/main.py:358
 msgid "About GNOME L10n"
 msgstr "Om GNOME L10n"
 
-#: src/gnome_l10n/main.py:176
+#: src/gnome_l10n/main.py:368
 msgid "Filter modules..."
 msgstr "Filtrera moduler..."
 
-#: src/gnome_l10n/main.py:190
+#: src/gnome_l10n/main.py:382
 msgid "Release:"
 msgstr "Utgåva:"
 
-#: src/gnome_l10n/main.py:197
+#: src/gnome_l10n/main.py:389
 msgid "Language:"
 msgstr "Språk:"
 
-#: src/gnome_l10n/main.py:205
+#: src/gnome_l10n/main.py:402
+msgid "Sort:"
+msgstr "Sortera:"
+
+#: src/gnome_l10n/main.py:417
 msgid "All"
 msgstr "Alla"
 
-#: src/gnome_l10n/main.py:210
+#: src/gnome_l10n/main.py:422
 msgid "Incomplete"
 msgstr "Ofärdiga"
 
-#: src/gnome_l10n/main.py:214
+#: src/gnome_l10n/main.py:426
 msgid "Complete"
 msgstr "Färdiga"
 
-#: src/gnome_l10n/main.py:272
+#: src/gnome_l10n/main.py:430
+msgid "Has Fuzzy"
+msgstr "Har luddiga"
+
+#: src/gnome_l10n/main.py:434
+msgid "Translated State"
+msgstr "Översättningstillstånd"
+
+#: src/gnome_l10n/main.py:492
 msgid "Loading..."
 msgstr "Läser in..."
 
-#: src/gnome_l10n/main.py:321
+#: src/gnome_l10n/main.py:562
 msgid "Loading module statistics..."
 msgstr "Läser in modulstatistik..."
 
-#: src/gnome_l10n/main.py:332
+#: src/gnome_l10n/main.py:573
 #, python-format
 msgid "Loading %d / %d modules..."
 msgstr "Läser in %d / %d moduler..."
 
-#: src/gnome_l10n/main.py:383
+#: src/gnome_l10n/main.py:631
 #, python-format
-msgid "%d modules — %d complete"
-msgstr "%d moduler — %d färdiga"
+msgid "%d modules — %d complete — %d fuzzy — %d untranslated"
+msgstr "%d moduler — %d färdiga — %d luddiga — %d oöversatta"
 
-#: src/gnome_l10n/main.py:391
+#: src/gnome_l10n/main.py:640
 #, python-format
 msgid "%d modules shown, %d total"
 msgstr "%d moduler visas, %d totalt"
 
-#: src/gnome_l10n/main.py:452
+#: src/gnome_l10n/main.py:714
 #, python-format
 msgid "Exported to %s"
 msgstr "Exporterades till %s"
 
-#: src/gnome_l10n/main.py:505
+#: src/gnome_l10n/main.py:781
+msgid "Quit"
+msgstr "Avsluta"
+
+#: src/gnome_l10n/main.py:782
+msgid "Refresh"
+msgstr "Uppdatera"
+
+#: src/gnome_l10n/main.py:783
+msgid "Search"
+msgstr "Sök"
+
+#: src/gnome_l10n/main.py:803
 msgid ""
 "Translation statistics viewer for GNOME.\n"
 "Data from l10n.gnome.org."
@@ -110,6 +222,34 @@ msgstr ""
 "Visa översättningsstatistik för GNOME.\n"
 "Data från l10n.gnome.org."
 
-#: src/gnome_l10n/main.py:506
+#: src/gnome_l10n/main.py:804
 msgid "translator-credits"
 msgstr "Daniel Nylander <po@danielnylander.se>, 2026."
+
+#: src/gnome_l10n/main.py:821
+msgid "Welcome"
+msgstr "Välkommen"
+
+#: src/gnome_l10n/main.py:827
+msgid "Welcome to GNOME Translation Stats"
+msgstr "Välkommen till Statistik för GNOME-översättning"
+
+#: src/gnome_l10n/main.py:829
+msgid ""
+"Track GNOME translation progress.\n"
+"\n"
+"✓ View translation stats for all GNOME modules\n"
+"✓ Filter by language and module\n"
+"✓ Sort by completion percentage\n"
+"✓ Links to Vertimus for translating"
+msgstr ""
+"Spåra översättningsprocessen för GNOME.\n"
+"\n"
+"✓ Visa översättningsstatistik för alla GNOME-moduler\n"
+"✓ Filtrera efter språk och modul\n"
+"✓ Sortera efter färdigställandegrad\n"
+"✓ Länkar till Vertimus för översättning"
+
+#: src/gnome_l10n/main.py:832
+msgid "Get Started"
+msgstr "Kom igång"
