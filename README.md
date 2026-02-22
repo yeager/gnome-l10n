@@ -1,10 +1,10 @@
 # GNOME L10n
 
-Översättningsstatistik för GNOME-moduler.
+Translation statistics for GNOME modules.
 
-GTK4/Adwaita · Python · v0.2.2 · 53 översättningsbara strängar
+GTK4/Adwaita · Python · v0.2.2 · 53 translatable strings
 
-## Installation
+## Install
 
 ### Ubuntu / Debian
 ```bash
@@ -18,10 +18,10 @@ sudo dnf install gnome-l10n
 ```
 Repo: [yeager/rpm-repo](https://github.com/yeager/rpm-repo)
 
-## Översättning
+## Translation
 
-Översätts via [Transifex](https://app.transifex.com/danielnylander/gnome-l10n/). 11 språk.
+Translated via [Transifex](https://app.transifex.com/danielnylander/gnome-l10n/). 11 languages.
 
-## Licens
+## License
 
 GPL-3.0-or-later · Daniel Nylander <daniel@danielnylander.se>
