@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=GNOME L10n
+Name[sv]=GNOME L10n
+Comment=GNOME localization status viewer
+Comment[sv]=Statusvisare för GNOME-översättning
+Exec=gnome-l10n
+Icon=gnome-l10n
+Categories=Development;GTK;Translation;
+Terminal=false
+StartupNotify=true
+StartupWMClass=se.danielnylander.gnome-l10n
